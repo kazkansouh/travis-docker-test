@@ -1,0 +1,10 @@
+language: c
+
+addons:
+  apt:
+    packages:
+    - autoconf
+    - automake
+
+script:
+- "autoreconf -ivf && ./configure && make"
