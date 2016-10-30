@@ -5,7 +5,7 @@ dist: trusty
 
 addons:
   apt:
-    package:
+    packages:
       dejagnu
 
 script:
