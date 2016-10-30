@@ -1,0 +1,4 @@
+language: c
+
+script:
+- "autoreconf -ivf && ./configure && make"
