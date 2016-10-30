@@ -1,10 +1,7 @@
 language: c
 
-addons:
-  apt:
-    packages:
-    - autoconf
-    - automake
+sudo: required
+dist: trusty
 
 script:
 - "autoreconf -ivf && ./configure && make"
