@@ -1,0 +1,8 @@
+
+
+proc tool_start { args } {
+    global TOOL_PATH
+    global spawn_id
+    
+    spawn $TOOL_PATH {*}$args
+}
