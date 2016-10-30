@@ -4,4 +4,4 @@ sudo: required
 dist: trusty
 
 script:
-- "autoreconf -ivf && ./configure && make"
+- "autoreconf -ivf && ./configure && make && make check"
