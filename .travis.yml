@@ -13,9 +13,9 @@ services:
 
 script:
 - >
-  "autoreconf -ivf && 
+  autoreconf -ivf && 
   ./configure && 
   make && 
   make check && 
   docker build -t travis-docker-test . && 
-  docker run --rm=true travis-docker-test"
+  docker run --rm=true travis-docker-test
