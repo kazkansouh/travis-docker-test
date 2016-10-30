@@ -5,7 +5,7 @@ set timeout 3
 tool_start
 expect {
     -re "Hello World" { pass "test 1" }
-    timeout { perror "Failed to spawn $GFI_TRIAGE_TOOL (timeout)"; fail "test 1" }
+    timeout { perror "Failed to spawn $TEST_TOOL (timeout)"; fail "test 1" }
     default { fail "test 1" }
 }
 uplevel #0 catch {close}
@@ -16,7 +16,7 @@ uplevel #0 catch {wait}
 tool_start
 expect {
     -re "Good bye!" { xpass "test 1" }
-    timeout { perror "Failed to spawn $GFI_TRIAGE_TOOL (timeout)"; fail "test 1" }
+    timeout { perror "Failed to spawn $TEST_TOOL (timeout)"; fail "test 1" }
     default { xfail "test 1" }
 }
 uplevel #0 catch {close}
