@@ -8,5 +8,8 @@ addons:
     packages:
       dejagnu
 
+services:
+  - docker
+
 script:
-- "autoreconf -ivf && ./configure && make && make check"
+- "autoreconf -ivf && ./configure && make && make check && docker build -t travis-docker-test . && docker run --rm=true travis-docker-test"
